@@ -2,7 +2,7 @@ import mongoose, { ConnectOptions } from 'mongoose'
 
 let isConnected: boolean = false
 
-export const connectToDatabase = async (): Promise<void> => {
+const connectToDatabase = async (): Promise<void> => {
   mongoose.set('strictQuery', true)
 
   if (isConnected) {
@@ -39,3 +39,5 @@ export const connectToDatabase = async (): Promise<void> => {
     console.log(errorMessage)
   }
 }
+
+export default connectToDatabase
