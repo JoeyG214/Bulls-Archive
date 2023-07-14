@@ -36,7 +36,7 @@ def main():
     split_courses_list.append(course_list)
 
   # Generating course array of objects
-  courses_array_of_objects = [{'name': item[1], 'number': item[0]} for item in split_courses_list]
+  courses_array_of_objects = [{'name': item[1], 'number': item[0]} for item in split_courses_list if item[0].startswith(('CDA', 'COP', 'COT', 'CAP', 'CIS', 'CEN', 'CNT'))]
 
   # Converting courses_array_of_objects into JSON
   json_courses = json.dumps(courses_array_of_objects, indent=4)

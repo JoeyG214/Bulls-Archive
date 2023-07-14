@@ -1,0 +1,534 @@
+[
+    {
+        "name": "Applied Data and Information Security ",
+        "number": "CIS 4778"
+    },
+    {
+        "name": "Computer Animation Fundamentals ",
+        "number": "CAP 4034"
+    },
+    {
+        "name": "Web Application Design ",
+        "number": "CAP 4063"
+    },
+    {
+        "name": "Mobile Biometrics ",
+        "number": "CAP 4103"
+    },
+    {
+        "name": "Introduction to Augmented and Virtual Reality ",
+        "number": "CAP 4111"
+    },
+    {
+        "name": "Malware Analysis and Reverse Engineering ",
+        "number": "CAP 4136"
+    },
+    {
+        "name": "Brain-Computer Interfaces ",
+        "number": "CAP 4160"
+    },
+    {
+        "name": "Image Processing Fundamentals ",
+        "number": "CAP 4401"
+    },
+    {
+        "name": "Computer Vision ",
+        "number": "CAP 4410"
+    },
+    {
+        "name": "Introduction to Artificial Intelligence ",
+        "number": "CAP 4621"
+    },
+    {
+        "name": "Affective Computing ",
+        "number": "CAP 4628"
+    },
+    {
+        "name": "Automated Reasoning and Theorem Proving ",
+        "number": "CAP 4637"
+    },
+    {
+        "name": "Natural Language Processing ",
+        "number": "CAP 4641"
+    },
+    {
+        "name": "Introduction to Robotics ",
+        "number": "CAP 4662"
+    },
+    {
+        "name": "Interactive Data Visualization ",
+        "number": "CAP 4744"
+    },
+    {
+        "name": "Social Media Mining ",
+        "number": "CAP 4773"
+    },
+    {
+        "name": "Data and Security Analytics ",
+        "number": "CAP 4790"
+    },
+    {
+        "name": "Computer Organization ",
+        "number": "CDA 3103"
+    },
+    {
+        "name": "Computer Logic and Design ",
+        "number": "CDA 3201"
+    },
+    {
+        "name": "Computer Logic and Design Lab ",
+        "number": "CDA 3201L"
+    },
+    {
+        "name": "Computer System Design ",
+        "number": "CDA 4203"
+    },
+    {
+        "name": "Computer System Design Lab ",
+        "number": "CDA 4203L"
+    },
+    {
+        "name": "Computer Architecture ",
+        "number": "CDA 4205"
+    },
+    {
+        "name": "Computer Architecture Lab ",
+        "number": "CDA 4205L"
+    },
+    {
+        "name": "CMOS-VLSI Design ",
+        "number": "CDA 4213"
+    },
+    {
+        "name": "CMOS-VLSI Design Lab ",
+        "number": "CDA 4213L"
+    },
+    {
+        "name": "Field Programmable Gate Array System Design and Analysis ",
+        "number": "CDA 4253"
+    },
+    {
+        "name": "Cryptographic Hardware and Embedded Systems ",
+        "number": "CDA 4321"
+    },
+    {
+        "name": "Principles of Secure Hardware Design ",
+        "number": "CDA 4322"
+    },
+    {
+        "name": "Practical Hardware Security ",
+        "number": "CDA 4323"
+    },
+    {
+        "name": "Control of Mobile Robots ",
+        "number": "CDA 4621"
+    },
+    {
+        "name": "Introduction to Mobile Robotics for Information Technology ",
+        "number": "CDA 4622"
+    },
+    {
+        "name": "Advanced Mobile Robotics for Information Technology ",
+        "number": "CDA 4623"
+    },
+    {
+        "name": "Human Computer Interfaces for Information Technology ",
+        "number": "CEN 3722"
+    },
+    {
+        "name": "Software Engineering ",
+        "number": "CEN 4020"
+    },
+    {
+        "name": "Software Testing ",
+        "number": "CEN 4072"
+    },
+    {
+        "name": "Mobile Applications Development for IT ",
+        "number": "CEN 4360"
+    },
+    {
+        "name": "Foundations of Cybersecurity ",
+        "number": "CIS 3213"
+    },
+    {
+        "name": "Unified Modeling Language ",
+        "number": "CIS 3303"
+    },
+    {
+        "name": "Principles of Information Security ",
+        "number": "CIS 3360"
+    },
+    {
+        "name": "Cryptography and Information Security ",
+        "number": "CIS 3362"
+    },
+    {
+        "name": "Information Technology Systems Security ",
+        "number": "CIS 3363"
+    },
+    {
+        "name": "Architecting Operating System Security ",
+        "number": "CIS 3367"
+    },
+    {
+        "name": "System Integration and Architecture for IT ",
+        "number": "CIS 3433"
+    },
+    {
+        "name": "Secure Software Development ",
+        "number": "CIS 3615"
+    },
+    {
+        "name": "Cloud Computing for IT ",
+        "number": "CIS 4083"
+    },
+    {
+        "name": "Penetration Testing for IT ",
+        "number": "CIS 4200"
+    },
+    {
+        "name": "Cyber Forensics and Investigations ",
+        "number": "CIS 4203"
+    },
+    {
+        "name": "Ethical Hacking ",
+        "number": "CIS 4204"
+    },
+    {
+        "name": "Privacy-Preserving and Trustworthy Cyber-Infrastructures ",
+        "number": "CIS 4212"
+    },
+    {
+        "name": "Aggressive Hacking - What Hackers Do ",
+        "number": "CIS 4216"
+    },
+    {
+        "name": "Human Aspects of Cybersecurity ",
+        "number": "CIS 4219"
+    },
+    {
+        "name": "Ethical Issues and Professional Conduct ",
+        "number": "CIS 4250"
+    },
+    {
+        "name": "Ethics for Information Technology ",
+        "number": "CIS 4253"
+    },
+    {
+        "name": "NoSQL Databases ",
+        "number": "CIS 4342"
+    },
+    {
+        "name": "Big Data Architecture with Hadoop ",
+        "number": "CIS 4344"
+    },
+    {
+        "name": "Big Data Storage and Analysis with Hadoop ",
+        "number": "CIS 4345"
+    },
+    {
+        "name": "Information Assurance and Security Management for IT ",
+        "number": "CIS 4361"
+    },
+    {
+        "name": "Cryptology and Information Security ",
+        "number": "CIS 4364"
+    },
+    {
+        "name": "Computer Security Policies and Disaster Preparedness ",
+        "number": "CIS 4365"
+    },
+    {
+        "name": "Database Security and Audits ",
+        "number": "CIS 4368"
+    },
+    {
+        "name": "Web Application Security ",
+        "number": "CIS 4369"
+    },
+    {
+        "name": "Mobile and Wireless Security ",
+        "number": "CIS 4387"
+    },
+    {
+        "name": "IT Project Management ",
+        "number": "CIS 4510"
+    },
+    {
+        "name": "Agile Risk Management ",
+        "number": "CIS 4512"
+    },
+    {
+        "name": "Requirements Led PM/PM Software & Tools ",
+        "number": "CIS 4514"
+    },
+    {
+        "name": "Quality & Testing w/ Agile in Project Management ",
+        "number": "CIS 4518"
+    },
+    {
+        "name": "IT Project Schedule & Cost Control ",
+        "number": "CIS 4524"
+    },
+    {
+        "name": "Contract Management & Negotiations ",
+        "number": "CIS 4525"
+    },
+    {
+        "name": "Hands-on Cybersecurity ",
+        "number": "CIS 4622"
+    },
+    {
+        "name": "Practical Cybersecurity ",
+        "number": "CIS 4623"
+    },
+    {
+        "name": "Independent Study in Computer Science ",
+        "number": "CIS 4900"
+    },
+    {
+        "name": "Computer Science and Engineering Project ",
+        "number": "CIS 4910"
+    },
+    {
+        "name": "Supervised Research in Computer Science ",
+        "number": "CIS 4915"
+    },
+    {
+        "name": "Cyber Security and IT Capstone Project ",
+        "number": "CIS 4916"
+    },
+    {
+        "name": "Special Topics in Computer Science I ",
+        "number": "CIS 4930"
+    },
+    {
+        "name": "Special Topics for Information Technology ",
+        "number": "CIS 4932"
+    },
+    {
+        "name": "Senior Project in Information Technology ",
+        "number": "CIS 4935"
+    },
+    {
+        "name": "Industry Internship ",
+        "number": "CIS 4940"
+    },
+    {
+        "name": "Industry Internship for IT ",
+        "number": "CIS 4947"
+    },
+    {
+        "name": "Computer Networks I ",
+        "number": "CNT 4004"
+    },
+    {
+        "name": "Computer Information Networks for Information Technology ",
+        "number": "CNT 4104"
+    },
+    {
+        "name": "Computer Information Networks Laboratory for Information Technology ",
+        "number": "CNT 4104L"
+    },
+    {
+        "name": "Network Security and Firewalls ",
+        "number": "CNT 4403"
+    },
+    {
+        "name": "Computing and Network Security ",
+        "number": "CNT 4411"
+    },
+    {
+        "name": "Secure Coding ",
+        "number": "CNT 4419"
+    },
+    {
+        "name": "System Administration and Maintenance for Information Technology ",
+        "number": "CNT 4603"
+    },
+    {
+        "name": "Network Programming for IT ",
+        "number": "CNT 4716C"
+    },
+    {
+        "name": "Network Science ",
+        "number": "CNT 4800"
+    },
+    {
+        "name": "Programming Concepts I ",
+        "number": "COP 2030"
+    },
+    {
+        "name": "Object-Oriented Programming (Java SE) ",
+        "number": "COP 2250"
+    },
+    {
+        "name": "Programming Concepts ",
+        "number": "COP 2510"
+    },
+    {
+        "name": "Programming Fundamentals for Information Technology ",
+        "number": "COP 2512"
+    },
+    {
+        "name": "Object Oriented Programming for Information Technology ",
+        "number": "COP 2513"
+    },
+    {
+        "name": "Database Systems Basics ",
+        "number": "COP 2700"
+    },
+    {
+        "name": "Special Topics for Information Technology ",
+        "number": "COP 2930"
+    },
+    {
+        "name": "Special Topics for Information Technology ",
+        "number": "COP 2931"
+    },
+    {
+        "name": "Advanced Programming in JAVA ",
+        "number": "COP 3259"
+    },
+    {
+        "name": "Object Oriented Software Design ",
+        "number": "COP 3331"
+    },
+    {
+        "name": "User-Level Introduction to Linux for IT ",
+        "number": "COP 3353"
+    },
+    {
+        "name": "Data Structures and Algorithms w/ Python ",
+        "number": "COP 3375"
+    },
+    {
+        "name": "Data Structures and Algorithms ",
+        "number": "COP 3415"
+    },
+    {
+        "name": "Program Design ",
+        "number": "COP 3514"
+    },
+    {
+        "name": "Advanced Program Design for Information Technology ",
+        "number": "COP 3515"
+    },
+    {
+        "name": "Database Systems Design ",
+        "number": "COP 3718"
+    },
+    {
+        "name": "Advanced Database Systems Design ",
+        "number": "COP 3722"
+    },
+    {
+        "name": "Special Topics for Information Technology ",
+        "number": "COP 3931"
+    },
+    {
+        "name": "Programming Languages ",
+        "number": "COP 4020"
+    },
+    {
+        "name": "Systems Programming: Java EE ",
+        "number": "COP 4260"
+    },
+    {
+        "name": "Symbolic Computations in Mathematics ",
+        "number": "COP 4313"
+    },
+    {
+        "name": "Software System Development ",
+        "number": "COP 4365"
+    },
+    {
+        "name": "Adv Object-Oriented Programming for IT ",
+        "number": "COP 4368"
+    },
+    {
+        "name": "Java-Based Python (Jython) ",
+        "number": "COP 4376"
+    },
+    {
+        "name": "Computing in Massively Parallel Systems ",
+        "number": "COP 4520"
+    },
+    {
+        "name": "Data Structures ",
+        "number": "COP 4530"
+    },
+    {
+        "name": "Data Structures and Algorithms for Information Technology ",
+        "number": "COP 4538"
+    },
+    {
+        "name": "Application Maintenance & Debugging for IT ",
+        "number": "COP 4564"
+    },
+    {
+        "name": "Operating Systems ",
+        "number": "COP 4600"
+    },
+    {
+        "name": "Compilers ",
+        "number": "COP 4620"
+    },
+    {
+        "name": "Software Development for Mobile Devices ",
+        "number": "COP 4656"
+    },
+    {
+        "name": "Mobile Applications Development ",
+        "number": "COP 4663"
+    },
+    {
+        "name": "Advanced Database Systems for Information Technology ",
+        "number": "COP 4703"
+    },
+    {
+        "name": "Database Design ",
+        "number": "COP 4710"
+    },
+    {
+        "name": "Data-Driven Web Sites ",
+        "number": "COP 4834"
+    },
+    {
+        "name": "Rich Internet Applications ",
+        "number": "COP 4854"
+    },
+    {
+        "name": "Java Programming for Information Technology ",
+        "number": "COP 4883"
+    },
+    {
+        "name": "Independent Study in Information Technology ",
+        "number": "COP 4900"
+    },
+    {
+        "name": "Special Topics for Information Technology ",
+        "number": "COP 4931"
+    },
+    {
+        "name": "Introduction to Discrete Structures ",
+        "number": "COT 3100"
+    },
+    {
+        "name": "Automata Theory and Formal Languages ",
+        "number": "COT 4210"
+    },
+    {
+        "name": "Analysis of Algorithms ",
+        "number": "COT 4400"
+    },
+    {
+        "name": "Computational Geometry ",
+        "number": "COT 4521"
+    },
+    {
+        "name": "Quantum Computing and Quantum Algorithms ",
+        "number": "COT 4601"
+    }
+]
