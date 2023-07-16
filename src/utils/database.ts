@@ -14,12 +14,12 @@ const connectToDatabase = async (): Promise<void> => {
 
   if (!MONGODB_URI) {
     throw new Error(
-      "Please define the MONGODB_URI environment variable inside .env.local"
+      'Please define the MONGODB_URI environment variable inside .env.local',
     )
   }
 
   const options: ConnectOptions = {
-    dbName: "BullsArchive",
+    dbName: 'BullsArchive',
     retryWrites: true,
   }
 

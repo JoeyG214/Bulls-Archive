@@ -16,16 +16,16 @@ const CourseSchema: Schema = new Schema({
   courseName: {
     type: String,
     required: [true, 'Course name is required'],
-  }
+  },
 })
 
 CourseSchema.plugin(uniqueValidator)
 CourseSchema.set('toJSON', {
-  transform: (document, returnedObject) => {
+  transform: (_document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString()
     delete returnedObject._id
     delete returnedObject.__v
-  }
+  },
 })
 
 const Course = mongoose.model<ICourseModel>('Course', CourseSchema)

@@ -1,6 +1,4 @@
-type Props = {}
-
-const EmailInput = (props: Props) => {
+const EmailInput = () => {
   return (
     <div className="mt-2">
       <input

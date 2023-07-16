@@ -1,6 +1,4 @@
-type Props = {}
-
-const PasswordInput = (props: Props) => {
+const PasswordInput = () => {
   return (
     <div className="mt-2">
       <input
