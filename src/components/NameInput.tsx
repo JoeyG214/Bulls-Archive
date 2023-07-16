@@ -1,13 +1,22 @@
+'use client'
+
+import { useState } from 'react'
+
 const NameInput = () => {
+
+  const [name, setName] = useState('')
+
   return (
-    <div className="mt-2">
+    <div className='mt-2'>
       <input
-        id="name"
-        name="name"
-        type="text"
-        autoComplete="name"
+        name='name'
+        type='text'
         required
-        className="credentialInput"
+        placeholder='First Last'
+        autoComplete='name'
+        className='credentialInput'
+        value={name}
+        onChange={({ target }) => setName(target.value)}
       />
     </div>
   )

@@ -1,13 +1,22 @@
+'use client'
+
+import { useState } from 'react'
+
 const EmailInput = () => {
+
+  const [email, setEmail] = useState('')
+
   return (
-    <div className="mt-2">
+    <div className='mt-2'>
       <input
-        id="email"
-        name="email"
-        type="email"
-        autoComplete="email"
+        name='email'
+        type='email'
         required
-        className="credentialInput"
+        placeholder='your-email@usf.edu'
+        autoComplete='email'
+        className='credentialInput'
+        value={email}
+        onChange={({ target }) => setEmail(target.value)}
       />
     </div>
   )
