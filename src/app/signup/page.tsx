@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import NameInput from "@/components/NameInput"
 import EmailInput from "@/components/EmailInput"
 import PasswordInput from "@/components/PasswordInput"
 
@@ -24,6 +25,13 @@ const SignUp = () => {
         <form className="space-y-6" action="#" method="POST">
           <div>
             <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+              Name
+            </label>
+            <NameInput />
+          </div>
+
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
               Email address
             </label>
             <EmailInput />
@@ -39,7 +47,7 @@ const SignUp = () => {
           </div>
 
           <div>
-            <button type="submit" className="credentialSubmit">Sign in</button>
+            <button type="submit" className="credentialSubmit">Create account</button>
           </div>
         </form>
       
