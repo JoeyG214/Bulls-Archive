@@ -1,4 +1,5 @@
 import mongoose, { Document, Schema } from 'mongoose'
+import uniqueValidator from 'mongoose-unique-validator'
 
 interface ICourse {
   courseNumber: string,
@@ -18,6 +19,7 @@ const CourseSchema: Schema = new Schema({
   }
 })
 
+CourseSchema.plugin(uniqueValidator)
 CourseSchema.set('toJSON', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString()
