@@ -1,6 +1,9 @@
 import Link from "next/link"
 import Image from "next/image"
 
+import EmailInput from "@/components/EmailInput"
+import PasswordInput from "@/components/PasswordInput"
+
 const Login = () => {
   return (
     <section className='flex flex-col justify-center px-6 py-12 lg:px-8 mb-20'>
@@ -23,18 +26,8 @@ const Login = () => {
             <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
               Email address
             </label>
-            <div className="mt-2">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                className="credentialInput"
-              />
-            </div>
+            <EmailInput />
           </div>
-
           <div>
             <div className="flex items-center justify-between">
               <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
@@ -46,16 +39,7 @@ const Login = () => {
                 </Link>
               </div>
             </div>
-            <div className="mt-2">
-              <input
-                id="password"
-                name="password"
-                type="password"
-                autoComplete="current-password"
-                required
-                className="credentialInput"
-              />
-            </div>
+            <PasswordInput />
           </div>
 
           <div>
