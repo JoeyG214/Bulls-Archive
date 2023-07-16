@@ -15,7 +15,7 @@ const Home = () => {
             or learn from the experiences of past students by checking out their notes.
           </p>
           <div className='mt-10 flex items-center justify-center gap-x-6'>
-            <Link href='/login' className='rounded-md bg-green-900 px-3.5 py-2.5 text-md font-semibold text-white shadow-md hover:bg-primaryGreen'>
+            <Link href='/login' className='customBtn'>
               Get started
             </Link>
           </div>
