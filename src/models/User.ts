@@ -1,0 +1,40 @@
+import mongoose, { Document, Schema } from "mongoose"
+import uniqueValidator from "mongoose-unique-validator"
+
+interface IUser {
+  name: string,
+  email: string,
+  passwordHash: string
+}
+
+interface IUserModel extends IUser, Document {}
+
+const UserSchema: Schema = new Schema({
+  name : {
+    type: String,
+    required: [true, 'Name is required'],
+  },
+  email: {
+    type: String,
+    required: [true, 'Email is required'],
+    unique: true,
+    match: [/^[\w-]+(\.[\w-]+)*@usf\.edu$/, 'Please enter a valid USF email address'],
+  },
+  passwordHash: {
+    type: String,
+  },
+})
+
+UserSchema.plugin(uniqueValidator)
+UserSchema.set('toJSON', {
+  transform: (_document, returnedObject) => {
+    returnedObject.id = returnedObject._id.toString()
+    delete returnedObject._id
+    delete returnedObject.passwordHash
+    delete returnedObject.__v
+  },
+})
+
+const User = mongoose.model<IUserModel>('User', UserSchema)
+
+export default User
