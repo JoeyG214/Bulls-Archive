@@ -4,7 +4,7 @@ import Background from "@/components/Background"
 
 const Home = () => {
   return (
-    <div className="isolate px-6 lg:px-8">
+    <div className="isolate px-6 lg:px-8 pb-20" >
       <div className="mx-auto max-w-3xl py-16 sm:py-24 lg:py-28">
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -15,7 +15,7 @@ const Home = () => {
             or learn from the experiences of past students by checking out their notes.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Link href="/login" className="rounded-md bg-green-900 px-3.5 py-2.5 text-md font-semibold text-white shadow-md hover:bg-[#41fd24]">
+            <Link href="/login" className="rounded-md bg-green-900 px-3.5 py-2.5 text-md font-semibold text-white shadow-md hover:bg-primaryGreen">
               Get started
             </Link>
           </div>
