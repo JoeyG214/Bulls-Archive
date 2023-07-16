@@ -6,7 +6,6 @@ const connectToDatabase = async (): Promise<void> => {
   mongoose.set('strictQuery', true)
 
   if (isConnected) {
-    console.log('MongoDB is already connected')
     return
   }
 
@@ -28,15 +27,8 @@ const connectToDatabase = async (): Promise<void> => {
 
     isConnected = true
 
-    console.log('MongoDB connected')
   } catch (error: unknown) {
-    let errorMessage: string = 'Error connecting to MongoDB: '
-
-    if (error instanceof Error) {
-      errorMessage += error.message
-    }
-
-    console.log(errorMessage)
+    throw new Error('Could not connect to MongoDB')
   }
 }
 
