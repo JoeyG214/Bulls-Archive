@@ -24,7 +24,7 @@ const Nav = () => {
           </div>
         </div>
         <div>
-          <Link href="/login" className="text-lg md:text-xl text-gray-900 hover:text-[#41fd24] font-semibold leading-6">
+          <Link href="/login" className="text-lg md:text-xl text-gray-900 hover:text-primaryGreen font-semibold leading-6">
             Log in
           </Link>
         </div>
