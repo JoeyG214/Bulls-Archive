@@ -1,5 +1,5 @@
-import mongoose, { Document, Schema } from "mongoose"
-import uniqueValidator from "mongoose-unique-validator"
+import mongoose, { Document, Schema } from 'mongoose'
+import uniqueValidator from 'mongoose-unique-validator'
 
 interface IUser {
   name: string,
@@ -22,8 +22,9 @@ const UserSchema: Schema = new Schema({
   },
   passwordHash: {
     type: String,
+    required: [true, 'Password is required'],
   },
-})
+}, { timestamps: true })
 
 UserSchema.plugin(uniqueValidator)
 UserSchema.set('toJSON', {
