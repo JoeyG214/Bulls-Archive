@@ -1,4 +1,4 @@
-import mongoose, { Document, Schema } from 'mongoose'
+import mongoose, { Document, Schema, Model } from 'mongoose'
 import uniqueValidator from 'mongoose-unique-validator'
 
 interface IUser {
@@ -36,6 +36,6 @@ UserSchema.set('toJSON', {
   },
 })
 
-const User = mongoose.model<IUserModel>('User', UserSchema)
+const User: Model<IUserModel> = mongoose.models.User || mongoose.model<IUserModel>('User', UserSchema)
 
 export default User

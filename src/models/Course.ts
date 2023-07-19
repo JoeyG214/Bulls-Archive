@@ -1,4 +1,4 @@
-import mongoose, { Document, Schema } from 'mongoose'
+import mongoose, { Document, Schema, Model } from 'mongoose'
 import uniqueValidator from 'mongoose-unique-validator'
 
 interface ICourse {
@@ -28,6 +28,6 @@ CourseSchema.set('toJSON', {
   },
 })
 
-const Course = mongoose.model<ICourseModel>('Course', CourseSchema)
+const Course: Model<ICourseModel> = mongoose.models.Course || mongoose.model<ICourseModel>('Course', CourseSchema)
 
 export default Course
