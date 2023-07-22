@@ -1,17 +1,41 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
-type Props = {}
+const SignUpForm = () => {
 
-const SignUpForm = (props: Props) => {
+  const router = useRouter()
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  //const [error, setError] = useState()
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    try {
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Sign up failed')
+      }
+
+      router.push('/login')
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        throw new Error('Could not create user.', error)
+      }
+    }
+  }
 
   return (
-    <form className='space-y-6'>
+    <form className='space-y-6' onSubmit={handleSubmit}>
       <div>
         <label className='block text-sm font-medium leading-6 text-gray-900'>
           Name
