@@ -10,6 +10,7 @@ module.exports = {
       backgroundImage: {
       },
       colors: {
+        primaryGreen: "#41fd24",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
@@ -24,5 +25,7 @@ module.exports = {
       xl: "1700px",
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
