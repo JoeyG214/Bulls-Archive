@@ -1,20 +1,36 @@
 'use client'
 
-import { useState } from 'react'
-
+import React, { useState } from 'react'
+import { signIn, useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
-type Props = {}
+const LoginForm = () => {
 
-const LoginForm = (props: Props) => {
+  const session = useSession()
+  const router = useRouter()
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
+  if (session.status === 'authenticated') {
+    router?.push('/courses')
+  }
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    signIn('credentials', {
+      email,
+      password,
+      callbackUrl: '/courses',
+    })
+  }
+
   return (
-    <form className='space-y-6' action='#' method='POST'>
+    <form className='space-y-6' onSubmit={handleSubmit}>
       <div>
-        <label htmlFor='email' className='block text-sm font-medium leading-6 text-gray-900'>
+        <label className='block text-sm font-medium leading-6 text-gray-900'>
           Email address
         </label>
         <div className='mt-2'>
@@ -33,7 +49,7 @@ const LoginForm = (props: Props) => {
 
       <div>
         <div className='flex items-center justify-between'>
-          <label htmlFor='password' className='block text-sm font-medium leading-6 text-gray-900'>
+          <label className='block text-sm font-medium leading-6 text-gray-900'>
             Password
           </label>
           <div className='text-sm'>
