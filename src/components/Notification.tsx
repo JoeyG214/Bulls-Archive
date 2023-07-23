@@ -5,11 +5,30 @@ import 'react-toastify/dist/ReactToastify.css'
 
 type Props = {
   message: string
+  status: string
 }
 
-const Notification = ({ message }: Props) => {
+const Notification = ({ message, status }: Props) => {
 
-  const notify = () => toast.success(`${message}`)
+  const notify = () => {
+    switch (status) {
+    case 'success':
+      toast.success(message)
+      break
+    case 'error':
+      toast.error(message)
+      break
+    case 'info':
+      toast.info(message)
+      break
+    case 'warning':
+      toast.warn(message)
+      break
+    default:
+      toast(message)
+      break
+    }
+  }
 
   return (
     <div>
