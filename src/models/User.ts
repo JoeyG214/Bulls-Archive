@@ -17,7 +17,7 @@ const UserSchema: Schema = new Schema({
   email: {
     type: String,
     required: [true, 'Email is required'],
-    unique: true,
+    unique: [true, 'Email already exists'],
     match: [/^[\w-]+(\.[\w-]+)*@usf\.edu$/, 'Please enter a valid USF email address'],
   },
   passwordHash: {

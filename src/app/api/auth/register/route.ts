@@ -20,7 +20,11 @@ export const POST = async (request: Request) => {
   try {
     await user.save()
     return NextResponse.json('User Created Successfully', { status: 201 })
-  } catch (err) {
-    return NextResponse.json('Something went wrong!', { status: 500 })
+  } catch (error : unknown) {
+    if (error instanceof Error) {
+      return NextResponse.json({ error: error.message }, { status: 400 })
+    } else {
+      return NextResponse.json({ error: 'Something went wrong' }, { status: 500 })
+    }
   }
 }

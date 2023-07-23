@@ -24,7 +24,8 @@ const SignUpForm = () => {
       })
 
       if (!response.ok) {
-        toast.error('Could not create user')
+        const data = await response.json()
+        toast.error(data.error)
         throw new Error('Sign up failed')
       }
 
