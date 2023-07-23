@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import UserButton from './UserButton'
 
 const Nav = () => {
   return (
@@ -23,11 +24,7 @@ const Nav = () => {
             </h1>
           </div>
         </div>
-        <div>
-          <Link href='/login' className='text-lg md:text-xl text-gray-900 hover:text-primaryGreen font-semibold leading-6'>
-            Log in
-          </Link>
-        </div>
+        <UserButton />
       </nav>
     </header>
   )
