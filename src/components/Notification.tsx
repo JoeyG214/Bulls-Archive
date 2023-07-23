@@ -1,16 +1,17 @@
 'use client'
 
+import { useEffect } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 type Props = {
   message: string
-  status: string
+  status: 'success' | 'error' | 'info' | 'warning' | 'default'
 }
 
 const Notification = ({ message, status }: Props) => {
 
-  const notify = () => {
+  useEffect(() => {
     switch (status) {
     case 'success':
       toast.success(message)
@@ -28,11 +29,10 @@ const Notification = ({ message, status }: Props) => {
       toast(message)
       break
     }
-  }
+  }, [message, status])
 
   return (
     <div>
-      <button onClick={notify}>Notify!</button>
       <ToastContainer />
     </div>
   )
