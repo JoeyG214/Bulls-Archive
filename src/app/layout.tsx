@@ -7,6 +7,9 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import AuthProvider from '@/components/AuthProvider'
 
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -14,14 +17,15 @@ export const metadata = {
   description: 'Discover and Share Computer Science Notes',
 }
 
-function RootLayout({
-  children,
-}: {
+type Props = {
   children: React.ReactNode
-}) {
+}
+
+const RootLayout = ({ children }: Props) => {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <ToastContainer />
         <AuthProvider>
           <main className="flex flex-col justify-between min-h-screen bg-white">
             <Nav />
