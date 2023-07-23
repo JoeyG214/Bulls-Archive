@@ -4,18 +4,17 @@ import Link from 'next/link'
 import SignUpForm from '@/components/SignUpForm'
 
 const SignUp = () => {
-
   return (
     <section className='flex flex-col justify-center px-6 py-12 lg:px-8 mb-20'>
       <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
         <Image
           src='/usf-logo.png'
           alt='USF Logo'
-          width={72}
-          height={72}
-          className='mx-auto'
+          width={96}
+          height={54}
+          className='mx-auto h-auto'
         />
-        <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'>
+        <h2 className='header'>
           Create an account
         </h2>
       </div>

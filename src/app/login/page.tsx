@@ -10,11 +10,11 @@ const Login = () => {
         <Image
           src='/usf-logo.png'
           alt='USF Logo'
-          width={72}
-          height={72}
-          className='mx-auto'
+          width={96}
+          height={54}
+          className='mx-auto h-auto'
         />
-        <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'>
+        <h2 className='header'>
           Sign in to your account
         </h2>
       </div>
