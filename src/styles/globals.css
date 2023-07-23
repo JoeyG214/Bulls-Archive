@@ -4,6 +4,26 @@
 
 
 @layer base {
+  .header {
+    @apply
+      mt-10
+      text-center
+      text-2xl
+      font-bold
+      leading-9
+      tracking-tight
+      text-gray-900
+  }
+
+  .subheader {
+    @apply
+      mt-10 
+      flex 
+      items-center 
+      justify-center 
+      gap-x-6
+  }
+
   .backgroundGreen {
     @apply 
       relative

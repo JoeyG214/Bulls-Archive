@@ -14,7 +14,7 @@ const Home = () => {
             Contribute to the knowledge base of future computer science students by uploading your current lecture notes,
             or learn from the experiences of past students by checking out their notes.
           </p>
-          <div className='mt-10 flex items-center justify-center gap-x-6'>
+          <div className='subheader'>
             <Link href='/login' className='customBtn'>
               Get started
             </Link>
