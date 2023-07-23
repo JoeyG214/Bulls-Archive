@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
@@ -15,32 +15,28 @@ const LoginForm = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  if (session.status === 'authenticated') {
-    router?.push('/courses')
-  }
+  useEffect(() => {
+    if (session?.status === 'authenticated') {
+      router.push('/courses')
+    }
+  })
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
-    try {
-      const response = await signIn('credentials', {
-        redirect: false,
-        email,
-        password,
-      })
-
-      if (!response?.ok) {
-        toast.error('Could not sign in')
-        throw new Error('Sign in failed')
+    signIn('credentials', {
+      email,
+      password,
+      callbackUrl: '/courses',
+      redirect: false,
+    }).then((response) => {
+      if (response && response.error) {
+        toast.error(response.error)
+      } else if (response && !response.error) {
+        toast.success('Successfully logged in!')
+        router.push('/courses')
       }
-
-      router?.push('/courses')
-      toast.success('Signed in successfully!')
-    } catch (error: unknown) {
-      if (error instanceof Error) {
-        toast.error('Could not sign in')
-      }
-    }
+    })
   }
 
   return (
