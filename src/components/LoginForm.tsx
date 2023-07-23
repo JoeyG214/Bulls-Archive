@@ -5,6 +5,8 @@ import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
+import { toast } from 'react-toastify'
+
 const LoginForm = () => {
 
   const session = useSession()
@@ -20,11 +22,25 @@ const LoginForm = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
-    signIn('credentials', {
-      email,
-      password,
-      callbackUrl: '/courses',
-    })
+    try {
+      const response = await signIn('credentials', {
+        redirect: false,
+        email,
+        password,
+      })
+
+      if (!response?.ok) {
+        toast.error('Could not sign in')
+        throw new Error('Sign in failed')
+      }
+
+      router?.push('/courses')
+      toast.success('Signed in successfully!')
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        toast.error('Could not sign in')
+      }
+    }
   }
 
   return (

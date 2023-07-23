@@ -3,6 +3,8 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
+import { toast } from 'react-toastify'
+
 const SignUpForm = () => {
 
   const router = useRouter()
@@ -10,7 +12,6 @@ const SignUpForm = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  //const [error, setError] = useState()
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -23,10 +24,12 @@ const SignUpForm = () => {
       })
 
       if (!response.ok) {
+        toast.error('Could not create user')
         throw new Error('Sign up failed')
       }
 
       router.push('/login')
+      toast.success('User created successfully! Please sign in.')
     } catch (error: unknown) {
       if (error instanceof Error) {
         throw new Error('Could not create user.', error)
