@@ -4,6 +4,7 @@ import uniqueValidator from 'mongoose-unique-validator'
 interface ICourse {
   courseNumber: string,
   courseName: string
+  documentLinks: string[]
 }
 
 interface ICourseModel extends ICourse, Document {}
@@ -17,6 +18,9 @@ const CourseSchema: Schema = new Schema({
     type: String,
     required: [true, 'Course name is required'],
   },
+  documentLinks: [{
+    type: String,
+  }],
 })
 
 CourseSchema.plugin(uniqueValidator)
