@@ -9,7 +9,7 @@ const rawData = fs.readFileSync(path.join(__dirname, 'my_courses.json'), 'utf8')
 const coursesData = JSON.parse(rawData)
 
 // Setup MongoDB connection
-const MONGODB_URI = 'mongodb+srv://ErjoGuce214:kG83IaEDccr1nCqD@cluster0.c2r2atw.mongodb.net/dev?retryWrites=true&w=majority'
+const MONGODB_URI = // Your MongoDB URI
 const options = {
   dbName: 'BullsArchive',
   retryWrites: true,
