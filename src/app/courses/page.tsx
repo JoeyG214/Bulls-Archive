@@ -10,6 +10,7 @@ interface Course {
   id: number
   courseName: string
   courseNumber: string
+  documentLinks: Array<string>
 }
 
 const getCourses = async () => {
@@ -80,13 +81,18 @@ const Courses = () => {
 
       <div className='flex flex-wrap justify-center text-center'>
         {courses.map((course) => (
-          <div key={course.id} className='flex flex-col justify-between items-center w-32 sm:w-40 h-auto m-2 sm:m-4 p-2 bg-gray-900/20 border-2 border-gray-900/40 rounded-lg hover:border-primaryGreen'>
+          <div key={course.id} className='m-2 sm:m-4 p-2 bg-gray-900/20 border-2 border-gray-900/40 rounded-lg hover:border-primaryGreen'>
             <Link href={`/courses/${course.id}`}>
-              <h3 className='font-semibold'>
-                {course.courseNumber}
-              </h3>
-              <div className='flex text-gray-900/80'>
-                {course.courseName}
+              <div className='flex flex-col items-center justify-between w-32 sm:w-60 h-40'>
+                <h3 className='font-semibold'>
+                  {course.courseNumber}
+                </h3>
+                <div className=' text-gray-900/80'>
+                  {course.courseName}
+                </div>
+                <div className='text-gray-900/50'>
+                  {course.documentLinks.length} Documents
+                </div>
               </div>
             </Link>
           </div>
