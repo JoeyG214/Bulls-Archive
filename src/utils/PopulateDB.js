@@ -46,7 +46,7 @@ mongoose.connect(MONGODB_URI, options)
     coursesData.forEach(async (course) => {
       const newCourse = new Course({
         courseName: course.courseName,
-        courseNumber: course.courseName,
+        courseNumber: course.courseNumber,
         documentLinks: []
       })
       try {
