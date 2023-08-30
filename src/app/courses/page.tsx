@@ -30,6 +30,7 @@ const getCourses = async () => {
 const Courses = () => {
 
   const session = useSession()
+  const [search, setSearch] = useState<string>('')
   const [courses, setCourses] = useState<Course[]>([])
 
   useEffect(() => {
@@ -63,16 +64,29 @@ const Courses = () => {
     )
   }
 
+  let coursesToDisplay = courses
+
+  if (search.length > 0) {
+    coursesToDisplay = courses.filter((course) => {
+      return course.courseName.toLowerCase().includes(search.toLowerCase())
+    })
+  }
+
   return (
-    <section className='flex flex-col gap-4 p-2 sm:p-4 mt-4'>
-      <div className='relative mx-2'>
+    <section className='flex flex-1 flex-col gap-2 sm:gap-4 p-2 sm:p-4 mt-4 sm:mt-8'>
+      <div className='relative mx-12'>
         <div className='absolute flex items-center inset-y-0 left-0 pl-3 pointer-events-none'>
           <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-6 h-6'>
             <path strokeLinecap='round' strokeLinejoin='round' d='M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z' />
           </svg>
         </div>
-        <input type='search' className='block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primaryGreen focus:border-primaryGreen' placeholder='Search Courses'/>
-        <button type='submit' className='absolute right-2 bottom-2 customBtn'>Search</button>
+        <input
+          type='search'
+          className='block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primaryGreen focus:border-primaryGreen'
+          placeholder='Search Courses'
+          value={search}
+          onChange={({ target }) => setSearch(target.value)}
+        />
       </div>
 
       <h2 className='header'>
@@ -80,7 +94,7 @@ const Courses = () => {
       </h2>
 
       <div className='flex flex-wrap justify-center text-center'>
-        {courses.map((course) => (
+        {coursesToDisplay.map((course) => (
           <div key={course.id} className='m-2 sm:m-4 p-2 bg-gray-900/20 border-2 border-gray-900/40 rounded-lg hover:border-primaryGreen'>
             <Link href={`/courses/${course.id}`}>
               <div className='flex flex-col items-center justify-between w-32 sm:w-60 h-40'>
